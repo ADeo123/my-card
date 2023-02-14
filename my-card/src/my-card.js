@@ -85,4 +85,37 @@ class MyCard extends LitElement {
   }
 }
 
+this.shadowRoot.querySelector(".duplicateBtn").addEventListener("click", function(e){
+  const div = this.shadowRoot.querySelector(".duplicateBtn");
+  let division = div.cloneNode(true);
+  document.body.appendChild(division);
+});
+//JavaScript Hover implementation
+this.shadowRoot.querySelector("div").addEventListener("mouseover", function (e) {
+const div = this.shadowRoot.querySelector("div");
+let hoverEffect = div.style.borderColor = "white";
+document.body.appendChild(hoverEffect);
+});
+this.shadowRoot.querySelector("div").addEventListener("mouseout", function (e) {
+const div = this.shadowRoot.querySelector("div");
+let hoverEffect = div.style.borderColor = "black";
+document.body.appendChild(hoverEffect);
+});
+//When the card is clicked the color changes
+this.shadowRoot.querySelector("changeColorBtn").addEventListener("click", function (e) {
+const div = this.shadowRoot.querySelector("div");
+let divColor = (div.style.backgroundColor = "gray"); //changes the background to gray
+document.body.appendChild(divColor);
+});
+//When the heading/title is clicked it is change to "something else"
+this.shadowRoot.querySelector("ChangeHeadingBtn").addEventListener("click", function (e) {
+heading.innerHTML = "Something else"; //replaces the text of the heading
+});
+//Deletes the last duplicated card from the webpage
+this.shadowRoot.querySelector(".deleteBtn").addEventListener("click", function (e) {
+let div = this.shadowRoot.querySelector("div");
+document.parentNode.removeChild(div);
+});
+
+
 customElements.define('my-card', MyCard);
