@@ -2,19 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
+<button class="deleteBtn">Delete Card</button>
+<button class="duplicateBtn"> Duplicate Card</button>
+<button class="changeColorBtn"> Background Color</button>
+<button class="ChangeHeadingBtn">Change Heading</button>
+
+<div class="mainWrapper">
+  <h1 id="heading"> Penn State University </h1>
+  <img src="https://www.psu.edu/psu-edu-assets/images/shared/psu-mark.svg" width="400" class="image">
+  <h2>Description</h2>
+  <p>The Penn State University logo showing the Nittany Lion. </p>
+  <button> <a href="https://hax.psu.edu"> Details
+  </a> </button> 
+</div>
+
 
   <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
+   div {
+  text-align: center;
+  border: 2px solid Black;
+  padding: 8px 8px 32px 32px;
+  width: 500px;
+  height: 500px;
+}
+button {
+  color: blue;
+  padding: px 8px 8px 8px 8px;
+  display: block;
+  margin: auto
+}
+.btn:hover {
+  background-color: blue; 
+  color: white;
+}
+.btn:focus {
+  background-color: blue; 
+  color: white;
+}
+.image {
+  padding: 8px 8px 32px 190px;
+}
+.heading{
+  margin: 50px;
+}
+@media (min-width: 500px) and (max-width: 800px) {
+  button {
+    opacity: 0;
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  div {
+    font-size: 10px;
+    image-resolution: auto;
+  }
+}
   </style>
   <title>my-card</title>
 </head>
