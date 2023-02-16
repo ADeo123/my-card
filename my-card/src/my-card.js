@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@lrnwebcomponents/meme-maker/meme-maker.js";
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
@@ -55,32 +56,22 @@ class MyCard extends LitElement {
     this.header = 'My app';
   }
 
+
+
+
   render() {
     return html`
-      <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
+      <div class="mainWrapper">
+      <h1 id="heading"> Penn State University </h1>
+      <img src="https://images.onwardstate.com/uploads/2014/02/NittanyLionLogo.jpg" width="400" class="image">
+      <h2>Description</h2>
+      <p>The Penn State University logo showing the Nittany Lion. </p>
+      <button> <a href="https://hax.psu.edu"> Details
+      </a> </button> 
+      <meme-maker alt="Penn State Logo" image-url="https://images.onwardstate.com/uploads/2014/02/NittanyLionLogo.jpg" top-text="We Are" bottom-text="Penn State">
+      </meme-maker>
+</div>
 
-        <p>Edit <code>src/MyCard.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
-      </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
     `;
   }
 }
