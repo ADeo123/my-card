@@ -9,7 +9,9 @@
 
 
 <my-card>
+<slot>
 
+</slot>
   
 </my-card>
 
@@ -17,47 +19,7 @@
 
 
   <style>
-   div {
-  text-align: center;
-  border: 2px solid rgb(0, 0, 0);
-  padding: 8px 8px 32px 32px;
-  width: 500px;
-  height: 500px;
-  background-color: navajowhite;
   
-}
-button {
-  color: blue;
-  padding: px 8px 8px 8px 8px;
-  display: block;
-  margin: auto
-}
-.btn:hover {
-  background-color: blue; 
-  color: white;
-}
-.btn:focus {
-  background-color: blue; 
-  color: white;
-}
-.image {
-  padding: 8px 8px 32px 10px;
-}
-.heading{
-  margin: 50px;
-}
-@media (min-width: 500px) and (max-width: 800px) {
-  button {
-    opacity: 0;
-    display: none;
-  }
-}
-@media (max-width: 500px) {
-  div {
-    font-size: 10px;
-    image-resolution: auto;
-  }
-}
   </style>
   <title>my-card</title>
 </head>

@@ -9,46 +9,47 @@ class MyCard extends LitElement {
   }
 
   static styles = css`
-    :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--my-card-background-color);
+  div {
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 8px 8px 32px 32px;
+    width: 500px;
+    height: 500px;
+    background-color: navajowhite;
+    
+  }
+  button {
+    color: blue;
+    padding: px 8px 8px 8px 8px;
+    display: block;
+    margin: auto
+  }
+  .btn:hover {
+    background-color: blue; 
+    color: white;
+  }
+  .btn:focus {
+    background-color: blue; 
+    color: white;
+  }
+  .image {
+    padding: 8px 8px 32px 10px;
+  }
+  .heading{
+    margin: 50px;
+  }
+  @media (min-width: 500px) and (max-width: 800px) {
+    button {
+      opacity: 0;
+      display: none;
     }
-
-    main {
-      flex-grow: 1;
+  }
+  @media (max-width: 500px) {
+    div {
+      font-size: 10px;
+      image-resolution: auto;
     }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
-    }
+  }
   `;
 
   constructor() {
@@ -62,15 +63,15 @@ class MyCard extends LitElement {
   render() {
     return html`
       <div class="mainWrapper">
-      <h1 id="heading"> Penn State University </h1>
-      <img src="https://images.onwardstate.com/uploads/2014/02/NittanyLionLogo.jpg" width="400" class="image">
-      <h2>Description</h2>
-      <p>The Penn State University logo showing the Nittany Lion. </p>
-      <button> <a href="https://hax.psu.edu"> Details
-      </a> </button> 
-      <meme-maker alt="Penn State Logo" image-url="https://images.onwardstate.com/uploads/2014/02/NittanyLionLogo.jpg" top-text="We Are" bottom-text="Penn State">
-      </meme-maker>
-</div>
+        <h1 id="heading"> Penn State University </h1>
+        <img src="https://images.onwardstate.com/uploads/2014/02/NittanyLionLogo.jpg" width="400" class="image">
+        <h2>Description</h2>
+        <p>The Penn State University logo showing the Nittany Lion. </p>
+        <button> <a href="https://hax.psu.edu"> Details
+        </a> </button> 
+        <meme-maker alt="Penn State Logo" image-url="https://images.onwardstate.com/uploads/2014/02/NittanyLionLogo.jpg" top-text="We Are" bottom-text="Penn State">
+        </meme-maker>
+      </div>
 
     `;
   }
